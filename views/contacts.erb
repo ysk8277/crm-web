@@ -1,6 +1,7 @@
-<h1><%= @crm_app_name %></h1>
-<p>View all contacts</p>
+<h1>All Contacts</h1>
+
 <ul>
-  <li><a href="/">Main menu</a></li>
-  <!-- please complete with links to other options -->
+<% @contacts.each do |contact| %>
+  <li><%= contact.first_name %> <%= contact.last_name %></li>
+<% end %>
 </ul>
