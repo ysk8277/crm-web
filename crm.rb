@@ -6,5 +6,17 @@ get '/' do
 end
 
 get '/contacts' do
-  erb :contacts
+  erb :contacts   #Display all contacts
+end
+
+get '/contacts/add' do
+  erb :add_contact 
+end
+
+get '/contacts/:id' do
+  erb :contacts_by_attribute  #Display contacts by attribute
+end
+
+get '/contacts/:id/modify' do
+  erb :modify_contact 
 end
