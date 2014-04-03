@@ -2,6 +2,14 @@
 
 <ul>
   <% @@rolodex.contacts.each do |contact| %>  
-  <li> <%= contact.first_name %> <%= contact.last_name %> <%= contact.email %> <%= contact.notes %> <%= contact.id %> </li>
+  <li> ID: <%= contact.id %> </li>
+  <li> First: <%= contact.first_name.capitalize %> </li>
+  <li> Last: <%= contact.last_name.capitalize %> </li>
+  <li> Email: <%= contact.email %> </li>
+  <li> Notes: <%= contact.notes %> </li>
+  </br>
   <% end %>
 </ul>
+
+<a href="/">Back to Main Menu</a>
+

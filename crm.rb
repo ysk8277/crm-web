@@ -28,3 +28,9 @@ end
 get '/contacts/:id/modify' do
   erb :modify_contact 
 end
+
+post '/contacts' do
+  add_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:notes], params[:id])
+  @@rolodex.create_contact(add_contact)
+  redirect to ('/contacts')
+end
