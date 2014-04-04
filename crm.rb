@@ -15,21 +15,17 @@ get '/contacts' do            #Display all contacts
   erb :contacts   
 end
 
-get '/contacts/add' do
-  erb :add_contact 
-end
-
 get '/contacts/:id' do
-  @contact = @@rolodex.find(params[:id].to_i)
+  @contact = @@rolodex.find(params[:id].to_i)   #finding corresponding object
   if @contact
-  erb :show_contact
+    erb :show_contact
   else 
     raise Sinatra::NotFound
   end
-end  
+end 
 
-get '/contacts/:id/modify' do
-  erb :modify_contact 
+get '/contacts/add' do
+  erb :add_contact 
 end
 
 post '/contacts' do
@@ -37,3 +33,14 @@ post '/contacts' do
   @@rolodex.create_contact(add_contact)
   redirect to ('/contacts')
 end
+
+get '/contacts/:id/modify' do     #uses 'put' because we're updating data.
+  @contact = @@rolodex.find(params[:id].to_i)   #finding corresponding object
+  if @contact
+    erb :modify_contact
+  else
+    raise Sinatra::NotFound 
+  end
+end
+
+
