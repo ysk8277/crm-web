@@ -1,16 +1,12 @@
-<div id="main_container">
-  <h2>All Contacts</h2>
-  <div id="sub_container">
-    <ul>
-      <% @@rolodex.contacts.each do |contact| %>  
-      <p> ID#: <%= contact.id %> </p>
-      <p> First: <%= contact.first_name.capitalize %> </p>
-      <p> Last: <%= contact.last_name.capitalize %> </p>
-      <p> Email: <%= contact.email %> </p>
-      <p> Notes: <%= contact.notes %> </p>
-      </br>
-      <% end %>
-    </ul>
-    <a href="/">Back to Main Menu</a>
-  </div>
-</div>
+<h1>All Contacts</h1>
+  <ul>
+    <% @@rolodex.contacts.each do |contact| %>  
+    <p> ID#: <%= contact.id %> </p>
+    <p> First: <%= contact.first_name.capitalize %> </p>
+    <p> Last: <%= contact.last_name.capitalize %> </p>
+    <p> Email: <%= contact.email %> </p>
+    <p> Notes: <%= contact.notes %> </p>
+    </br>
+    <% end %>
+  </ul>
+<a href="/">Back to Main Menu</a>

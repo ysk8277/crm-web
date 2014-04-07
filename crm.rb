@@ -2,12 +2,12 @@ require_relative 'rolodex'
 require_relative 'contact'
 require 'sinatra'
 
-@@rolodex = Rolodex.new       #define class variable @@ to access Rolodex
+@@rolodex = Rolodex.new       
 
 @@rolodex.create_contact(Contact.new("Will", "Richman", "will@bitmakerlabs.com", "Co-Founder", ""))
 
 get '/' do 
-  @crm_app_name = "C.R.M"     #<%= %> use alligator tags to replace static name with ruby var.
+  @crm_app_name = "C.R.M"     
   erb :index
 end
 
@@ -15,14 +15,6 @@ get '/contacts' do            #Display all contacts
   erb :contacts   
 end
 
-get '/contacts/:id' do
-  @contact = @@rolodex.find(params[:id].to_i)   #finding corresponding object
-  if @contact
-    erb :show_contact
-  else 
-    raise Sinatra::NotFound
-  end
-end 
 
 get '/contacts/add' do
   erb :add_contact 
@@ -34,8 +26,17 @@ post '/contacts' do
   redirect to ('/contacts')
 end
 
-get '/contacts/:id/modify' do     #uses 'put' because we're updating data.
+get '/contacts/:id' do
   @contact = @@rolodex.find(params[:id].to_i)   #finding corresponding object
+  if @contact
+  erb :show_contact
+  else 
+  raise Sinatra::NotFound
+  end
+end
+ 
+get '/contacts/:id/modify' do    
+  @contact = @@rolodex.find(params[:id].to_i)  
   if @contact
     erb :modify_contact
   else

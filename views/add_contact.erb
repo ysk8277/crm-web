@@ -1,7 +1,19 @@
-<div id="main_container">
-  <h2>Create New Contact</h2>
-  <div id="sub_container">
+<h1>Create New Contact</h1>
     
+<form action="/contacts" method="post">
+
+  <fieldset>
+  <label>First Name:</label> <input type="text" name="first_name"><br/>
+  <label>Last Name:</label> <input type="text" name="last_name"><br/>
+  <label>Email:</label> <input type="text" name="email"><br/>
+  <label>Notes:</label> <input type="text" name="notes"><br/>
+  <input type="submit" name="Submit" value ="Submit"/>
+  </fieldset>
+  
+</form></br>
+  
+  <a href="/">Back to Main Menu</a>
+
   <!-- <form action="/contacts" method="post">
     <fieldset>
     <input type="text" name="foo" autofocus required placeholder="input"/>
@@ -21,16 +33,3 @@
     <input type="submit" name="Submit" value ="Submit Foo"/>
   </form>
  -->
-
-    <form action="/contacts" method="post">
-      <fieldset> 
-      <label>First Name:</label> <input type="text" name="first_name"><br/>
-      <label>Last Name:</label> <input type="text" name="last_name"><br/>
-      <label>Email:</label> <input type="text" name="email"><br/>
-      <label>Notes:</label> <input type="text" name="notes"><br/>
-      <input type="submit" name="Submit" value ="Submit"/>
-      </fieldset>
-    </form></br>
-    <a href="/">Back to Main Menu</a>
-  </div>
-</div>
