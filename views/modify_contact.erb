@@ -1,15 +1,20 @@
-<h1>Modify an Existing Contact:</h1>
+<div id = 'main_container'>
   
-<h2>Edit a Contact</h2>
-<ul>
-<form action="/contacts/<%= @contact.id %>" method="post">
-  <input type="hidden" name="_method" value="put">  
-  <input type="text" name="first_name" value="<%= @contact.first_name %>">
-  <input type="text" name="last_name" value="<%= @contact.last_name %>">
-  <input type="text" name="email" value="<%= @contact.email %>">
-  <input type="text" name="note" value="<%= @contact.notes %>">
-  <input type="submit" name="Submit">
-</form>
-</ul>
-</br>
-<p><a href="/">Main menu</a></p>  
+  <h1>Modify an Existing Contact:</h1>  
+  
+  <div id = 'sub_container'>  
+    
+      <form action="/contacts/<%= @contact.id %>" method="post">
+        <input type="hidden" name="_method" value="put">  
+        <input type="text" name="first_name" value="<%= @contact.first_name %>">
+        <input type="text" name="last_name" value="<%= @contact.last_name %>">
+        <input type="text" name="email" value="<%= @contact.email %>">
+        <input type="text" name="note" value="<%= @contact.notes %>">
+        <input type="submit" name="Submit">
+      </form>
+    
+    </br>
+    <p><a href="/">Main menu</a></p>  
+  </div>  
+
+</div>

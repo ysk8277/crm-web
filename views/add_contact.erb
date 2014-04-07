@@ -1,20 +1,28 @@
-<h1>Create New Contact</h1>
-    
-<form action="/contacts" method="post">
+<div id = 'main_container'>
 
-  <fieldset>
-  <label>First Name:</label> <input type="text" name="first_name"><br/>
-  <label>Last Name:</label> <input type="text" name="last_name"><br/>
-  <label>Email:</label> <input type="text" name="email"><br/>
-  <label>Notes:</label> <input type="text" name="notes"><br/>
-  <input type="submit" name="Submit" value ="Submit"/>
-  </fieldset>
-  
-</form></br>
-  
-  <a href="/">Back to Main Menu</a>
+  <h1>Create New Contact</h1>
+   
+  <div id = 'sub_container'>
 
-  <!-- <form action="/contacts" method="post">
+    <form action="/contacts" method="post">
+
+      <fieldset>
+      <label>First Name:</label> <input type="text" name="first_name"><br/>
+      <label>Last Name:</label> <input type="text" name="last_name"><br/>
+      <label>Email:</label> <input type="text" name="email"><br/>
+      <label>Notes:</label> <input type="text" name="notes"><br/>
+      <input type="submit" name="Submit" value ="Submit"/>
+      </fieldset>
+
+    </form>
+    </br>
+      
+    <p><a href="/">Back to Main Menu</a></p>
+  </div>
+
+</div>
+<!-- 
+  <form action="/contacts" method="post">
     <fieldset>
     <input type="text" name="foo" autofocus required placeholder="input"/>
     <label for="frdio-1">foo</label>
