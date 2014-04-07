@@ -29,8 +29,8 @@ get '/contacts' do            #Display all contacts
   erb :contacts   
 end
 
-get '/contacts/add' do
-  erb :add_contact 
+get '/contacts/new' do
+  erb :new_contact 
 end
 
 post '/contacts' do
@@ -52,10 +52,10 @@ get '/contacts/:id' do
   end
 end
  
-get '/contacts/:id/modify' do    
+get '/contacts/:id/edit' do    
   @contact = Contact.get(params[:id].to_i)  
   if @contact
-    erb :modify_contact
+    erb :edit_contact
   else
     raise Sinatra::NotFound 
   end
