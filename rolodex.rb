@@ -6,7 +6,7 @@ class Rolodex
     @contacts = []
   end
 
-  def create_contact(contact) 
+  def add_contact(contact) 
     @contacts << contact
   end
 
