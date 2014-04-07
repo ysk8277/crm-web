@@ -4,9 +4,9 @@
   
     <div id = 'sub_container'>
       <ul>
-        <% @@rolodex.contacts.each do |contact| %>  
+        <% @contacts.each do |contact| %>  
         <li> ID#: <%= contact.id %></a></li>
-        <li> Name: <a href="/contacts/<%= contact.id %>"> <%= contact.first_name.capitalize %> <%= contact.last_name.capitalize %></a></li>
+        <li> Name: <a href="/contacts/<%= contact.id %>"> <%= contact.first_name%> <%= contact.last_name%></a></li>
         <li> Email: <%= contact.email %></a></li>
         <li> Notes: <%= contact.notes %></a></li>
         </br>
