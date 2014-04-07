@@ -32,7 +32,7 @@ ul {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
 }
 #main_header {
@@ -40,21 +40,57 @@ h1 {
   float: left;
   top: 0;
   width: 100%;
-  padding: 10px 30px;
+  padding: 9px 30px;
   background-color: #C0C0C0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #main_container {
   position: absolute;
   width: 100%;
-  margin: 70px 30px;
+  margin: 60px 30px;
 
 }
 
 #sub_container {
   position: absolute;
-  width: 50%;
-  margin: 20px 0px;
+  width: 100%;
+  margin: auto;
+   margin: 20px 5px;
 }
+
+form {
+  position: relative;
+  width:  500px;
+}
+
+#form {
+  margin: auto;
+  padding: 10px;
+  line-height: 25px;
+}
+
+input {
+  width: 450px;
+  margin: auto;
+}
+
+#submit_btn {
+  text-align: center;
+}
+
+#submit_btn input {
+  width: 120px;
+  text-align: center;
+  margin: auto;
+}
+
+textarea {
+  resize: none;
+  width: 450px;
+  height: 40px;
+  max-width: 450px;
+}
+
+
 
