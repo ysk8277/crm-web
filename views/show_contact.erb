@@ -5,9 +5,19 @@
     <ul>
       <li> <strong>Name:</stonr> <%= @contact.first_name %> <%= @contact.last_name %></li>
       <li> <strong>Email:</strong> <%= @contact.email %></li>
-      <li> <strong>Note:</stront> <%= @contact.notes %></li>
+      <li> <strong>Notes:</stront> <%= @contact.notes %></li>
     </ul>
     </br>
+     
+      <form action="/contacts/<%= @contact.id %>" method="post"/>
+        <div id ='delete_btn'>
+          <input type="hidden" name="_method" value="delete"/>
+          <input type="submit" name="Delete Contact" value="Delete Contact"/>
+        </div>    
+      </form>
+    </br>
+    
+    <p><a href="/contacts/<%= @contact.id %>/modify">Modify an Existing Contact</a></p>
     <p><a href="/">Back to Main Menu</a></p>
   </div>
 </div>

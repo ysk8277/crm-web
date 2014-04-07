@@ -5,14 +5,21 @@
   <div id = 'sub_container'>  
     
       <form action="/contacts/<%= @contact.id %>" method="post">
-        <input type="hidden" name="_method" value="put">  
-        <input type="text" name="first_name" value="<%= @contact.first_name %>">
-        <input type="text" name="last_name" value="<%= @contact.last_name %>">
-        <input type="text" name="email" value="<%= @contact.email %>">
-        <input type="text" name="notes" value="<%= @contact.notes %>">
-        <input type="submit" name="Submit">
+      
+      <fieldset>  
+        <div id = 'form_add_modify'> 
+        <input type="hidden" name="_method" value="put"> 
+        <label>First Name:</label><input type="text" name="first_name" value="<%= @contact.first_name %>"/>
+        <label>Last Name:</label><input type="text" name="last_name" value="<%= @contact.last_name %>"/>
+        <label>Email:</label><input type="text" name="email" value="<%= @contact.email %>"/>
+        <label>Notes:</label><textarea id ="notes" name="notes"><%= @contact.notes %></textarea>
+          <div id = 'submit_btn'>
+          <input type="submit" name="Submit" value="Submit"/>
+          </div>
+      </fieldset>
+     
       </form>
-    
+
     </br>
     <p><a href="/">Main menu</a></p>  
   </div>  

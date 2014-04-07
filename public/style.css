@@ -63,15 +63,15 @@ form {
   width:  500px;
 }
 
-#form {
+input {
+  width: 100%;
+}
+
+#form_add_modify {
+  width: 450px;
   margin: auto;
   padding: 10px;
   line-height: 25px;
-}
-
-input {
-  width: 450px;
-  margin: auto;
 }
 
 #submit_btn {
@@ -90,6 +90,12 @@ textarea {
   height: 40px;
   max-width: 450px;
 }
+
+#delete_btn {
+  text-align: left;
+  width: 120px;
+}
+
 
 
 
