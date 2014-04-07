@@ -1,0 +1,27 @@
+<div id = 'main_container'>
+  
+  <h1>Modify an Existing Contact:</h1>  
+  
+  <div id = 'sub_container'>  
+    
+      <form action="/contacts/<%= @contact.id %>" method="post">
+      
+      <fieldset id = 'field_set'>  
+        <div id = 'form_add_modify'> 
+        <input type="hidden" name="_method" value="put"> 
+        <label>First Name:</label><input type="text" name="first_name" value="<%= @contact.first_name %>"/>
+        <label>Last Name:</label><input type="text" name="last_name" value="<%= @contact.last_name %>"/>
+        <label>Email:</label><input type="text" name="email" value="<%= @contact.email %>"/>
+        <label>Notes:</label><textarea id ="notes" name="notes"><%= @contact.notes %></textarea>
+          <div id = 'submit_btn'>
+          <input type="submit" name="Submit" value="Submit"/>
+          </div>
+      </fieldset>
+     
+      </form>
+
+    </br>
+    <p><a href="/">Main menu</a></p>  
+  </div>  
+
+</div>

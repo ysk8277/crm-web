@@ -1,0 +1,47 @@
+<div id = 'main_container'>
+
+  <h1>Create New Contact</h1>
+   
+  <div id = 'sub_container'>
+
+    <form action="/contacts" method="post">
+      
+      <fieldset id = 'field_set'>
+        <div id = 'form_add_modify'>
+          <label>First Name:</label><input type="text" name="first_name"/>
+          <label>Last Name:</label><input type="text" name="last_name"/>
+          <label>Email:</label><input type="text" name="email"/>
+          <label>Notes:</label><textarea id = 'notes' name="notes"></textarea>
+            <div id = 'submit_btn'>
+            <input type="submit" name="Submit" value ="Submit"/>
+            </div>
+        </div>
+      </fieldset>
+   
+    </form>
+    </br>
+      
+    <p><a href="/">Back to Main Menu</a></p>
+  </div>
+
+</div>
+<!-- 
+  <form action="/contacts" method="post">
+    <fieldset>
+    <input type="text" name="foo" autofocus required placeholder="input"/>
+    <label for="frdio-1">foo</label>
+    <label for="frdio-2">bar</label>
+
+    <input type="radio" name="frdio" id="frdio-1" value="foo"/>
+    <input type="radio" name="frdio" id="frdio-2" value="bar"/>
+    
+    <textarea name="notes"></textarea>
+    <select name="Capital">
+      <option value="1">Toronto</option>
+      <option value="2">Edmonton</option>
+      <option value="3">Victoria</option>  
+    </select>
+    </fieldset>
+    <input type="submit" name="Submit" value ="Submit Foo"/>
+  </form>
+ -->
