@@ -6,7 +6,7 @@
     
       <form action="/contacts/<%= @contact.id %>" method="post">
       
-      <fieldset>  
+      <fieldset id = 'field_set'>  
         <div id = 'form_add_modify'> 
         <input type="hidden" name="_method" value="put"> 
         <label>First Name:</label><input type="text" name="first_name" value="<%= @contact.first_name %>"/>
